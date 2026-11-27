@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#BA5427">
+  <title>suffix — Independent studio</title>
+  <meta name="description" content="Tinkering with game tech, math, neurobiology, astronomy, and music. Exploring complex systems across code and sound, shipping select releases along the way.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="suffix">
+  <meta property="og:title" content="suffix — Independent studio">
+  <meta property="og:description" content="Tinkering with game tech, math, neurobiology, astronomy, and music. Exploring complex systems across code and sound, shipping select releases along the way.">
+  <meta property="og:url" content="https://heysuffix.github.io/">
+  <meta property="og:image" content="https://heysuffix.github.io/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="suffix — cream X mascot on a terracotta print-inspired studio cover.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://heysuffix.github.io/og.png">
+  <meta name="twitter:image:alt" content="suffix — cream X mascot on a terracotta print-inspired studio cover.">
+  <link rel="canonical" href="https://heysuffix.github.io/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22150%20150%20760%20760%22%3E%3Crect%20x%3D%22150%22%20y%3D%22150%22%20width%3D%22760%22%20height%3D%22760%22%20rx%3D%22115%22%20fill%3D%22%23BA5427%22%2F%3E%3Cdefs%3E%3CclipPath%20id%3D%22c%22%3E%3Cpath%20d%3D%22M222%20264%20C225%20221%20266%20201%20309%20212%20C401%20231%20470%20307%20519%20377%20C548%20419%20562%20439%20584%20434%20C622%20425%20665%20367%20716%20333%20C757%20306%20798%20294%20821%20322%20C846%20347%20845%20376%20825%20406%20C799%20444%20751%20466%20720%20503%20C690%20538%20694%20559%20717%20592%20C750%20636%20781%20664%20809%20701%20C841%20743%20862%20790%20837%20821%20C810%20856%20760%20846%20718%20821%20C664%20790%20631%20746%20594%20707%20C566%20678%20547%20660%20526%20666%20C491%20676%20461%20720%20423%20752%20C381%20788%20334%20819%20294%20820%20C258%20820%20238%20796%20243%20762%20C250%20715%20299%20677%20345%20646%20C394%20612%20424%20589%20421%20560%20C418%20530%20397%20490%20366%20451%20C333%20410%20283%20369%20250%20328%20C230%20303%20219%20281%20222%20264%20Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M222%20264%20C225%20221%20266%20201%20309%20212%20C401%20231%20470%20307%20519%20377%20C548%20419%20562%20439%20584%20434%20C622%20425%20665%20367%20716%20333%20C757%20306%20798%20294%20821%20322%20C846%20347%20845%20376%20825%20406%20C799%20444%20751%20466%20720%20503%20C690%20538%20694%20559%20717%20592%20C750%20636%20781%20664%20809%20701%20C841%20743%20862%20790%20837%20821%20C810%20856%20760%20846%20718%20821%20C664%20790%20631%20746%20594%20707%20C566%20678%20547%20660%20526%20666%20C491%20676%20461%20720%20423%20752%20C381%20788%20334%20819%20294%20820%20C258%20820%20238%20796%20243%20762%20C250%20715%20299%20677%20345%20646%20C394%20612%20424%20589%20421%20560%20C418%20530%20397%20490%20366%20451%20C333%20410%20283%20369%20250%20328%20C230%20303%20219%20281%20222%20264%20Z%22%20fill%3D%22%23F6F1E3%22%2F%3E%3Cpath%20d%3D%22M652%20770%20C715%20790%20773%20769%20807%20699%20L881%20690%20L880%20880%20L636%20879%20Z%22%20fill%3D%22%23B98C45%22%20clip-path%3D%22url%28%23c%29%22%2F%3E%3Cpath%20d%3D%22M474%20509%20C489%20508%20505%20514%20515%20525%20C530%20543%20521%20558%20508%20562%20C491%20569%20475%20551%20474%20529%20Z%20M628%20499%20C642%20489%20657%20481%20666%20483%20C676%20490%20675%20514%20669%20526%20C662%20542%20650%20544%20640%20536%20C631%20529%20627%20515%20628%20499%20Z%20M550%20576%20C565%20575%20583%20567%20592%20558%20C597%20554%20602%20559%20598%20565%20C587%20580%20567%20588%20552%20585%20C545%20584%20543%20579%20550%20576%20Z%22%20fill%3D%22%231B1F26%22%2F%3E%3Cpath%20d%3D%22M452%20508%20C475%20505%20497%20511%20512%20525%20M607%20508%20C628%20495%20648%20488%20665%20488%22%20fill%3D%22none%22%20stroke%3D%22%231B1F26%22%20stroke-width%3D%2212%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --brick: #BA5427; --paper: #F6F1E3; --ink: #1B1F26;
+      --ochre: #B98C45; --muted: #6B655B;
+      --line: 1.5px solid var(--ink); --stamp: 3px 3px 0 var(--ink);
+      --display: 'Bricolage Grotesque', 'Arial Rounded MT Bold', Arial, sans-serif;
+      --mono: 'IBM Plex Mono', 'Courier New', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { position: relative; min-height: 100vh; margin: 0; background: var(--brick); color: var(--ink); font: 400 16px/1.55 var(--display); -webkit-font-smoothing: antialiased; }
+    body::after {
+      content: ''; position: absolute; inset: 0; z-index: 20; pointer-events: none;
+      opacity: .045;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23F6F1E3' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+    }
+    ::selection { background: var(--ochre); color: var(--ink); }
+    a { color: inherit; } button { font: inherit; color: inherit; }
+    a, button { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 2px dashed var(--ink); outline-offset: 5px; }
+    h1, h2, h3, p { margin: 0; }
+    svg { display: block; }
+    .shell { max-width: 870px; margin: 0 auto; padding: 0 20px 28px; }
+    .mast { height: 170px; position: relative; display: flex; align-items: flex-end; padding-bottom: 15px; }
+    .folio { background: var(--paper); border: var(--line); padding: 6px 9px; font: 500 10px/1.4 var(--mono); letter-spacing: .045em; transform: rotate(-2deg); position: relative; z-index: 1; }
+    .folio b { font-weight: 600; }
+    .mascot { position: absolute; bottom: -13px; right: 3%; width: 184px; height: auto; overflow: visible; border: 0; padding: 0; background: transparent; cursor: pointer; touch-action: manipulation; }
+    .mascot > svg { width: 100%; height: auto; overflow: visible; }
+    .mascot:disabled { cursor: default; }
+    .mascot:focus-visible { outline-color: var(--paper); border-radius: 8px; }
+    .mascot-reaction { transform-origin: 50% 90%; }
+    .mascot[data-reacting="true"] .mascot-reaction { animation: mischief 720ms ease both; }
+    @keyframes mischief { 0%,100% { transform: none; } 30% { transform: translateY(-5px) rotate(-5deg); } 60% { transform: translateY(-2px) rotate(2deg); } }
+    .creature { transform-origin: 50% 95%; animation: breathe 5s ease-in-out infinite; }
+    .eye { transform-box: fill-box; transform-origin: center 10%; transition: transform 180ms ease; }
+    .brow { transition: transform 220ms ease; }
+    .mascot[data-expression="squint"] .brow { transform: translateY(3px); }
+    .mascot[data-expression="blink"] .eye { transform: scaleY(.075); transition-duration: 85ms; }
+    .mascot[data-expression="squint"] .eye { transform: scaleY(.38); transition-duration: 250ms; }
+    @keyframes breathe { 0%,100% { transform: translateY(2px) rotate(-1deg); } 50% { transform: translateY(-3px) rotate(1deg); } }
+    .sheet { position: relative; z-index: 2; background: var(--paper); border: var(--line); box-shadow: 5px 5px 0 var(--ink); padding: 26px 22px 0; }
+    .identity { padding-bottom: 25px; }
+    .wordmark { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 10px 14px; }
+    h1 { font-size: clamp(76px, 17vw, 112px); line-height: .79; letter-spacing: -.05em; font-weight: 800; font-variation-settings: 'opsz' 96; padding: 0 .07em .13em 0; }
+    .handle { display: inline-block; font: 500 11px/1.2 var(--mono); padding: 7px 8px; border: var(--line); background: var(--ochre); border-radius: 2px; margin-top: 6px; transform: rotate(2deg); white-space: nowrap; }
+    .bio { max-width: 600px; margin-top: 15px; }
+    .bio p:first-child { font-weight: 600; font-size: clamp(17px, 3vw, 21px); line-height: 1.35; max-width: 510px; }
+    .bio p + p { margin-top: 9px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+    .release { position: relative; border: var(--line); box-shadow: var(--stamp); background: var(--paper); display: grid; grid-template-columns: minmax(0, 1fr); }
+    .release-copy { padding: 18px 16px 20px; min-width: 0; }
+    .label, .group h3, .section-label { font: 600 10px/1.4 var(--mono); letter-spacing: .095em; text-transform: uppercase; }
+    .label { display: inline-flex; align-items: center; gap: 6px; padding: 4px 6px; background: var(--ochre); border: 1px solid var(--ink); }
+    .label::before { content: ''; width: 6px; height: 6px; background: var(--ink); transform: rotate(45deg); }
+    .release h3 { font: 800 clamp(27px, 6vw, 43px)/.98 var(--display); letter-spacing: -.055em; margin: 13px 0 9px; }
+    .release p { font-size: 14px; line-height: 1.45; max-width: 340px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 17px; }
+    .tactile { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; border: var(--line); box-shadow: var(--stamp); background: var(--paper); padding: 9px 11px; text-decoration: none; cursor: pointer; font: 600 11px/1.4 var(--mono); transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease; }
+    .tactile.primary { background: var(--ink); color: var(--paper); }
+    .tactile:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+    .arrow { font: 500 16px/1 var(--mono); }
+    .diagram { background: var(--ochre); border-bottom: var(--line); position: relative; display: grid; place-items: center; min-height: 132px; overflow: hidden; }
+    .diagram svg { width: min(100%, 260px); height: 132px; }
+    .ecosystem { margin-top: 29px; }
+    .section-label { display: flex; align-items: center; gap: 12px; color: var(--muted); }
+    .section-label::after { content: ''; height: 1px; background: var(--ink); flex: 1; opacity: .35; }
+    .groups { display: grid; gap: 16px; margin-top: 16px; }
+    .group h3 { padding-bottom: 6px; border-bottom: 1px solid var(--ink); }
+    .profile { display: grid; grid-template-columns: 23px minmax(0,1fr) 15px; align-items: center; gap: 9px; min-height: 55px; padding: 7px 3px; border-bottom: 1px dashed var(--muted); text-decoration: none; transition: background-color 120ms ease, transform 120ms ease; }
+    .profile:last-child { border-bottom: 0; }
+    .profile .glyph { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .profile strong { display: block; font-size: 17px; line-height: 1.15; font-weight: 700; letter-spacing: -.025em; }
+    .profile small { display: block; font: 400 10px/1.45 var(--mono); color: var(--muted); margin-top: 3px; }
+    .profile .arrow { justify-self: end; font-size: 15px; }
+    .profile:active { transform: translate(2px, 2px); background: var(--ochre); }
+    .profile:active small { color: var(--ink); }
+    .contact { border-top: var(--line); margin-top: 23px; padding: 17px 0 19px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+    .contact .section-label { width: 100%; }
+    .contact .section-label::after { display: none; }
+    .copy { display: inline-grid; grid-template-columns: 16px minmax(0,1fr); gap: 7px; }
+    .copy svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    .copy-label { display: grid; min-width: 0; }
+    .copy-label > span { grid-area: 1 / 1; transition: opacity 150ms ease, transform 150ms ease; overflow-wrap: anywhere; }
+    .copy-done { opacity: 0; transform: translateY(3px); }
+    .copy[data-copied="true"] { background: var(--ochre); }
+    .copy[data-copied="true"] .copy-normal { opacity: 0; transform: translateY(-3px); }
+    .copy[data-copied="true"] .copy-done { opacity: 1; transform: none; }
+    .mail { font: 500 11px/1.4 var(--mono); text-underline-offset: 4px; min-height: 44px; display: inline-flex; align-items: center; }
+    .footer { display: flex; align-items: center; justify-content: space-between; border-top: var(--line); padding: 12px 0 13px; font: 400 10px/1.4 var(--mono); color: var(--muted); }
+    .footer-mark { color: var(--ink); font-size: 16px; line-height: 1; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @media (hover: hover) and (pointer: fine) {
+      .tactile:hover { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--ink); background: var(--ochre); color: var(--ink); }
+      .profile:hover { background: var(--ochre); transform: translate(2px,2px); }
+      .profile:hover small { color: var(--ink); }
+      .mail:hover { text-decoration-thickness: 2px; }
+    }
+    @media (min-width: 700px) {
+      .shell { padding: 0 30px 40px; }
+      .mast { height: 205px; padding-bottom: 19px; }
+      .mascot { width: 222px; right: 6%; bottom: -15px; }
+      .sheet { padding: 35px 36px 0; }
+      .identity { padding-bottom: 28px; }
+      .wordmark { align-items: center; gap: 22px; }
+      .handle { margin-top: 11px; }
+      .bio { margin-top: 12px; }
+      .release { grid-template-columns: minmax(0,1fr) 34%; }
+      .release-copy { padding: 20px 23px 22px; grid-row: 1; grid-column: 1; }
+      .diagram { grid-row: 1; grid-column: 2; border-bottom: 0; border-left: var(--line); }
+      .diagram svg { width: 100%; height: 100%; max-height: 200px; }
+      .groups { grid-template-columns: 1fr .95fr 1.15fr; gap: 23px; }
+      .contact .section-label { width: auto; margin-right: auto; }
+    }
+    @media (max-width: 359px) {
+      .shell { padding-inline: 13px; }
+      .sheet { padding-inline: 15px; }
+      .mascot { width: 157px; right: 0; }
+      .folio { font-size: 9px; }
+      .mast { height: 148px; }
+      h1 { font-size: 70px; }
+    }
+    [hidden] { display: none !important; }
+    .view-tabs { display: flex; gap: 8px; margin: 0 0 25px; border-bottom: 1px solid var(--ink); padding-bottom: 12px; }
+    .view-tabs .tactile { min-height: 42px; flex: 1; justify-content: flex-start; padding: 8px 10px; white-space: nowrap; }
+    .view-tabs .tactile[aria-current="page"] { background: var(--ochre); color: var(--ink); box-shadow: 1px 1px 0 var(--ink); transform: translate(2px, 2px); }
+    .tab-number { font-weight: 400; }
+    .view { scroll-margin-top: 16px; }
+    .view.is-entering { animation: turn-page 180ms ease-out both; }
+    @keyframes turn-page { from { opacity: .65; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+    .view-heading:focus { outline: none; }
+    .gateway { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: var(--line); box-shadow: var(--stamp); background: rgba(185,140,69,.13); }
+    .gateway-copy { flex: 1 1 165px; min-width: 0; }
+    .gateway-kicker { display: block; font: 600 10px/1.4 var(--mono); letter-spacing: .095em; }
+    .gateway p { font-size: 15px; font-weight: 600; margin-top: 3px; }
+    .support-note { display: grid; grid-template-columns: 23px minmax(0,1fr); gap: 9px; align-items: start; padding: 10px 3px 3px; color: var(--muted); font: 400 10px/1.5 var(--mono); }
+    .support-note svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.25; }
+    .support-note strong { display: block; font-weight: 600; color: var(--ink); margin-bottom: 3px; }
+    .catalog-head { padding-bottom: 23px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; font: 500 11px/1.4 var(--mono); text-underline-offset: 4px; margin-bottom: 10px; }
+    .catalog-head h2 { font-size: clamp(43px, 9vw, 72px); font-weight: 800; letter-spacing: -.05em; line-height: .95; }
+    .catalog-head p { color: var(--muted); margin-top: 10px; font-size: 15px; }
+    .release-list { display: grid; gap: 20px; }
+    .release.no-diagram { grid-template-columns: minmax(0, 1fr); }
+    .release-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+    .release-tag { font: 500 9px/1.4 var(--mono); color: var(--muted); border: 1px solid var(--muted); padding: 3px 5px; letter-spacing: .04em; }
+    .catalog-log { display: flex; gap: 9px; align-items: baseline; margin: 20px 0 12px; padding: 11px 0; color: var(--muted); font: 400 11px/1.55 var(--mono); }
+    .catalog-log b { color: var(--ink); white-space: nowrap; }
+    .orbit-ring { transform-origin: 125px 95px; animation: orbit 54s linear infinite; }
+    .core-node { transform-origin: 125px 95px; animation: core-pulse 4s ease-in-out infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes core-pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.18); opacity: .72; } }
+    .lab-status { display: flex; align-items: center; gap: 8px; min-height: 38px; border-top: 1px dashed var(--muted); padding: 10px 0; font: 400 10px/1.5 var(--mono); color: var(--muted); }
+    .status-dot { width: 7px; height: 7px; flex: 0 0 7px; border: 1px solid var(--ink); background: var(--ochre); border-radius: 50%; animation: status-pulse 3s ease-in-out infinite; }
+    @keyframes status-pulse { 0%,100% { opacity: 1; } 50% { opacity: .45; } }
+    @media (max-width: 699px) { .lab-status { font-size: 9px; } }
+    .contact noscript { font: 400 11px/1.5 var(--mono); color: var(--muted); }
+    @media (min-width: 700px) {
+      .view-tabs { gap: 10px; margin-bottom: 28px; }
+      .view-tabs .tactile { flex: 0 0 auto; min-width: 150px; }
+      .gateway { padding: 14px 17px; }
+    }
+    @media (max-width: 359px) {
+      .view-tabs { gap: 6px; }
+      .view-tabs .tactile { padding-inline: 7px; font-size: 10px; }
+      .gateway .tactile { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Small custom icon set. All icons are decorative and have text labels. -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+    <symbol id="i-itch" viewBox="0 0 24 24"><path d="M4 10v10h16V10M3 10l3-6h12l3 6v2c-2 2-4 1-5-1-1 3-6 3-8 0-1 2-3 3-5 1z"/><path d="M9 20v-5h6v5"/></symbol>
+    <symbol id="i-fab" viewBox="0 0 24 24"><path d="M12 2 21 7v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10M7.5 4.5l9 5"/></symbol>
+    <symbol id="i-patreon" viewBox="0 0 24 24"><path d="M4 3v18M9 21V11a6.5 6.5 0 1 1 6.5 6.5H9"/><circle cx="15.5" cy="10.5" r="2.5"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 20c-4 1-4-2-6-2M9 22v-4c0-1 .4-2 1-2.5-4-.5-6-2.5-6-6 0-1.5.5-3 1.5-4-.4-1-.4-2.5 0-3.5C8 2 9 3 10 4a10 10 0 0 1 4 0c1-1 2-2 4.5-2 .4 1 .4 2.5 0 3.5 1 1 1.5 2.5 1.5 4 0 3.5-2 5.5-6 6 .6.5 1 1.5 1 2.5v4"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 3h4l12 18h-4zM20 3l-7 8M11 13l-7 8"/></symbol>
+    <symbol id="i-reddit" viewBox="0 0 24 24"><path d="M12 8l2-5 5 1M4 12a2.5 2.5 0 1 0 0 5M20 12a2.5 2.5 0 1 1 0 5"/><circle cx="20" cy="4" r="1.5"/><ellipse cx="12" cy="15" rx="8" ry="6"/><path d="M9 17q3 3 6 0"/><circle cx="9" cy="13.5" r=".7" fill="currentColor"/><circle cx="15" cy="13.5" r=".7" fill="currentColor"/></symbol>
+  </svg>
+  <div class="shell">
+    <div class="mast">
+      <div class="folio" aria-hidden="true"><b>INDEPENDENT</b><br><span id="folio-view">STUDIO INDEX / 01</span></div>
+      <button type="button" class="mascot" id="mascot" aria-label="Make the suffix mascot squint" disabled>
+      <svg viewBox="190 180 690 690" aria-hidden="true" focusable="false">
+        <defs>
+          <path id="x-body" d="M222 264 C225 221 266 201 309 212 C401 231 470 307 519 377 C548 419 562 439 584 434 C622 425 665 367 716 333 C757 306 798 294 821 322 C846 347 845 376 825 406 C799 444 751 466 720 503 C690 538 694 559 717 592 C750 636 781 664 809 701 C841 743 862 790 837 821 C810 856 760 846 718 821 C664 790 631 746 594 707 C566 678 547 660 526 666 C491 676 461 720 423 752 C381 788 334 819 294 820 C258 820 238 796 243 762 C250 715 299 677 345 646 C394 612 424 589 421 560 C418 530 397 490 366 451 C333 410 283 369 250 328 C230 303 219 281 222 264 Z"/>
+          <clipPath id="mascot-cut"><use href="#x-body"/></clipPath>
+        </defs>
+        <g class="mascot-reaction"><g class="creature">
+          <use href="#x-body" transform="translate(8 9)" fill="#1B1F26"/>
+          <use href="#x-body" fill="#F6F1E3"/>
+          <path d="M652 770 C715 790 773 769 807 699 L881 690 L880 880 L636 879 Z" fill="#B98C45" clip-path="url(#mascot-cut)"/>
+          <use href="#x-body" fill="none" stroke="#1B1F26" stroke-width="4.5" stroke-linejoin="round"/>
+          <g class="eye">
+            <path class="pupil" d="M474 509 C489 508 505 514 515 525 C530 543 521 558 508 562 C491 569 475 551 474 529 Z" fill="#1B1F26"/>
+          </g>
+          <path class="brow" d="M452 508 C475 505 497 511 512 525" fill="none" stroke="#1B1F26" stroke-width="12" stroke-linecap="round"/>
+          <g class="eye">
+            <path class="pupil" d="M628 499 C642 489 657 481 666 483 C676 490 675 514 669 526 C662 542 650 544 640 536 C631 529 627 515 628 499 Z" fill="#1B1F26"/>
+          </g>
+          <path class="brow" d="M607 508 C628 495 648 488 665 488" fill="none" stroke="#1B1F26" stroke-width="12" stroke-linecap="round"/>
+          <path d="M550 576 C565 575 583 567 592 558 C597 554 602 559 598 565 C587 580 567 588 552 585 C545 584 543 579 550 576 Z" fill="#1B1F26"/>
+        </g></g>
+      </svg>
+      </button>
+    </div>
+    <main class="sheet">
+      <nav class="view-tabs" aria-label="Studio notebook">
+        <a class="tactile" href="#index" data-route="index"><span class="tab-number">01 /</span> Index</a>
+        <a class="tactile" href="#releases" data-route="releases"><span class="tab-number">02 /</span> Releases</a>
+      </nav>
+      <section class="view" id="index" aria-labelledby="index-title">
+      <header class="identity">
+        <div class="wordmark"><h1 id="index-title" class="view-heading" tabindex="-1">suffix</h1><span class="handle">@heysuffix</span></div>
+        <div class="bio">
+          <p>Tinkering with game tech, math, neurobiology, astronomy, and music.</p>
+          <p>Exploring complex systems across code and sound, shipping select releases along the way.</p>
+        </div>
+      </header>
+      <section class="gateway" aria-label="Browse releases">
+        <div class="gateway-copy"><span class="gateway-kicker">RELEASES // 01</span><p>Packs, demos &amp; upcoming tools</p></div>
+        <a class="tactile" href="#releases" data-route="releases">Browse releases <span class="arrow" aria-hidden="true">→</span></a>
+      </section>
+      <section class="ecosystem" aria-labelledby="network-title">
+        <h2 class="section-label" id="network-title">Elsewhere / 02</h2>
+        <div class="groups">
+          <section class="group"><h3>Stores</h3>
+            <a class="profile" data-link="itch" href="https://suffixdev.itch.io" target="_blank" rel="me noopener noreferrer"><svg class="glyph" aria-hidden="true"><use href="#i-itch"/></svg><span><strong>itch.io</strong><small>Packs &amp; Demos</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="profile" data-link="fab" href="https://www.fab.com/sellers/Suffix" target="_blank" rel="me noopener noreferrer"><svg class="glyph" aria-hidden="true"><use href="#i-fab"/></svg><span><strong>Fab</strong><small>Commercial Assets</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          </section>
+          <section class="group"><h3>Support</h3>
+            <a class="profile" data-link="patreon" href="https://patreon.com/wearesuffix" target="_blank" rel="me noopener noreferrer"><svg class="glyph" aria-hidden="true"><use href="#i-patreon"/></svg><span><strong>Patreon</strong><small>Back ongoing R&amp;D &amp; free tools</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+            <div class="support-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5zM8 8h8M8 12h8M8 16h5"/></svg><span><strong>A note on support</strong>For the work between releases.</span></div>
+          </section>
+          <section class="group"><h3>Code &amp; community</h3>
+            <a class="profile" data-link="github" href="https://github.com/heysuffix" target="_blank" rel="me noopener noreferrer"><svg class="glyph" aria-hidden="true"><use href="#i-github"/></svg><span><strong>GitHub</strong><small>Open source &amp; experiments</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="profile" data-link="x" href="https://x.com/heysuffix" target="_blank" rel="me noopener noreferrer"><svg class="glyph" aria-hidden="true"><use href="#i-x"/></svg><span><strong>X</strong><small>Devlogs &amp; updates</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="profile" data-link="reddit" href="https://www.reddit.com/user/heysuffix/" target="_blank" rel="me noopener noreferrer"><svg class="glyph" aria-hidden="true"><use href="#i-reddit"/></svg><span><strong>Reddit</strong><small>Showcases &amp; threads</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          </section>
+        </div>
+      </section>
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 class="section-label" id="contact-title">Direct contact / 03</h2>
+        <button type="button" class="tactile copy" id="copy-email" disabled>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="6" width="10" height="11" rx="1"/><path d="M13 3H3v11"/></svg>
+          <span class="copy-label" aria-hidden="true"><span class="copy-normal" id="email-text">suffix.dev@proton.me</span><span class="copy-done">Copied ✓</span></span>
+          <span class="sr-only" id="copy-accessible">Copy email address</span>
+        </button>
+        <a class="mail" id="mail-link" href="mailto:suffix.dev@proton.me">Send an email ↗</a>
+        <span class="sr-only" role="status" id="copy-status"></span>
+        <noscript>Copy suffix.dev@proton.me manually or use the email link.</noscript>
+      </section>
+      </section>
+      <section class="view" id="releases" aria-labelledby="catalog-title">
+        <header class="catalog-head">
+          <a class="back-link" href="#index" data-route="index">← Back to Index</a>
+          <h2 id="catalog-title" class="view-heading" tabindex="-1">Releases</h2>
+          <p>Selected commercial packs, demos, and upcoming free tools.</p>
+        </header>
+        <div class="release-list" id="release-list">
+      <article class="release" data-release="orbital-spec-01" aria-labelledby="release-title">
+        <div class="diagram" aria-hidden="true">
+          <svg viewBox="0 0 250 190" fill="none" stroke="#1B1F26" stroke-width="1.2">
+            <path d="M15 29V15h14m192 0h14v14M15 161v14h14m192 0h14v-14" stroke-width="1.5"/>
+            <g opacity=".42" stroke-dasharray="2 4"><path d="M125 15v160M15 95h220"/><circle cx="125" cy="95" r="70"/></g>
+            <circle cx="125" cy="95" r="54"/><g class="orbit-ring"><circle cx="125" cy="95" r="43" stroke-dasharray="1 5"/><path d="M125 49v7m43 39h-7" stroke-width="1.5"/></g>
+            <ellipse cx="125" cy="95" rx="91" ry="32" transform="rotate(-28 125 95)" stroke-width="1.6"/>
+            <ellipse cx="125" cy="95" rx="76" ry="24" transform="rotate(47 125 95)" opacity=".55"/>
+            <circle cx="125" cy="95" r="21" fill="#F6F1E3" stroke-width="1.5"/>
+            <path d="M104 95h42m-21-21v42M110 82l30 26m-30 0 30-26" opacity=".55"/>
+            <circle class="core-node" cx="125" cy="95" r="6" fill="#1B1F26"/>
+            <circle cx="194" cy="44" r="6" fill="#F6F1E3" stroke-width="1.5"/>
+            <path d="M194 38V27h21M57 139h-8v15H30"/>
+            <circle cx="57" cy="139" r="3" fill="#1B1F26"/>
+            <path d="M119 41h12M119 149h12M71 89v12M179 89v12"/>
+            <g font-family="IBM Plex Mono, monospace" font-size="8" stroke="none" fill="#1B1F26"><text x="21" y="25">FIG. 01</text><text x="229" y="168" text-anchor="end">SPEC / 01</text><text x="21" y="168">X—Y</text></g>
+          </svg>
+        </div>
+        <div class="release-copy">
+          <span class="label">Release #01</span>
+          <h3 id="release-title">ORBITAL // SPEC-01</h3>
+          <p>Procedural retro-futuristic HUD &amp; instrumentation pack for commercial game projects.</p>
+          <div class="release-tags" aria-label="Release categories"><span class="release-tag">COMMERCIAL</span><span class="release-tag">HUD / UI</span></div>
+          <div class="actions">
+            <a class="tactile primary" data-link="demo" href="https://suffixdev.itch.io/orbital-spec-01-live-demo" target="_blank" rel="noopener noreferrer">Live Demo <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="tactile" data-link="release" href="https://suffixdev.itch.io/orbital-spec-01-cassette-futurism-sci-fi-ui-hud-kit" target="_blank" rel="noopener noreferrer">Get on itch.io <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </article>
+        </div>
+        <div class="catalog-log"><b id="next-release-number">02 //</b><span>In progress — free tools &amp; experiments in development</span></div>
+      </section>
+      <template id="release-template">
+        <article class="release no-diagram">
+          <div class="release-copy">
+            <span class="label"></span>
+            <h3></h3>
+            <p></p>
+            <div class="release-tags" aria-label="Release categories"></div>
+            <div class="actions"></div>
+          </div>
+        </article>
+      </template>
+      <div class="lab-status"><span class="status-dot" aria-hidden="true"></span><span id="lab-status-text">IN LAB // Exploring systems &amp; preparing next drop</span></div>
+      <footer class="footer"><span>suffix — built by hand.</span><span class="footer-mark" aria-hidden="true">✳</span></footer>
+    </main>
+  </div>
+  <script>
+    // Keep the static hrefs and fallback copy above in sync when editing this map.
+    const SITE_LINKS = Object.freeze({
+      demo: 'https://suffixdev.itch.io/orbital-spec-01-live-demo',
+      release: 'https://suffixdev.itch.io/orbital-spec-01-cassette-futurism-sci-fi-ui-hud-kit',
+      itch: 'https://suffixdev.itch.io',
+      fab: 'https://www.fab.com/sellers/Suffix',
+      patreon: 'https://patreon.com/wearesuffix',
+      github: 'https://github.com/heysuffix',
+      x: 'https://x.com/heysuffix',
+      reddit: 'https://www.reddit.com/user/heysuffix/',
+      email: 'suffix.dev@proton.me',
+      labStatus: 'IN LAB // Exploring systems & preparing next drop'
+    });
+
+    // Add an entry here for each new release. The first has a static HTML
+    // fallback and its original custom diagram; later entries use the template.
+    // Actions accept a SITE_LINKS key (link) or a literal HTTPS URL (url).
+    const RELEASES = [
+      {
+        id: 'orbital-spec-01',
+        number: '01',
+        title: 'ORBITAL // SPEC-01',
+        description: 'Procedural retro-futuristic HUD & instrumentation pack for commercial game projects.',
+        tags: ['COMMERCIAL', 'HUD / UI'],
+        actions: [
+          { label: 'Live Demo', link: 'demo', primary: true },
+          { label: 'Get on itch.io', link: 'release' }
+        ]
+      }
+    ];
+
+    (() => {
+      'use strict';
+      function externalUrl(value) {
+        try {
+          const url = new URL(value);
+          return ['https:', 'http:'].includes(url.protocol) ? url.href : null;
+        } catch (_) { return null; }
+      }
+      document.querySelectorAll('[data-link]').forEach(link => {
+        const url = externalUrl(SITE_LINKS[link.dataset.link]);
+        if (url) link.href = url;
+      });
+      document.getElementById('lab-status-text').textContent = SITE_LINKS.labStatus;
+
+      // Static fallback stays useful without JS; JS hydrates it and adds entries.
+      const releaseList = document.getElementById('release-list');
+      const template = document.getElementById('release-template');
+      const staticReleases = new Map(Array.from(releaseList.children, card => [card.dataset.release, card]));
+      const usedIds = new Set();
+      RELEASES.forEach(release => {
+        if (!/^[a-z0-9-]+$/.test(release.id) || usedIds.has(release.id)) return;
+        usedIds.add(release.id);
+        const card = staticReleases.get(release.id) || template.content.firstElementChild.cloneNode(true);
+        card.dataset.release = release.id;
+        const heading = card.querySelector('h3');
+        heading.id = `release-${release.id}`;
+        card.setAttribute('aria-labelledby', heading.id);
+        card.querySelector('.label').textContent = `Release #${release.number}`;
+        heading.textContent = release.title;
+        card.querySelector('.release-copy p').textContent = release.description;
+        const tags = release.tags.map(tag => {
+          const span = document.createElement('span');
+          span.className = 'release-tag'; span.textContent = tag; return span;
+        });
+        card.querySelector('.release-tags').replaceChildren(...tags);
+        const actions = release.actions.flatMap(action => {
+          const url = externalUrl(action.link ? SITE_LINKS[action.link] : action.url);
+          if (!url) return [];
+          const a = document.createElement('a');
+          a.className = `tactile${action.primary ? ' primary' : ''}`;
+          a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+          const arrow = document.createElement('span');
+          arrow.className = 'arrow'; arrow.setAttribute('aria-hidden', 'true'); arrow.textContent = '↗';
+          a.append(action.label + ' ', arrow);
+          return [a];
+        });
+        const actionRow = card.querySelector('.actions');
+        actionRow.replaceChildren(...actions); actionRow.hidden = !actions.length;
+        releaseList.append(card);
+      });
+      staticReleases.forEach((card, id) => { if (!usedIds.has(id)) card.remove(); });
+      const nextNumber = Math.max(0, ...RELEASES.map(r => Number(r.number) || 0)) + 1;
+      document.getElementById('next-release-number').textContent = `${String(nextNumber).padStart(2, '0')} //`;
+
+      // Hash navigation uses ordinary anchors/history, not a client router.
+      // Without JS both sections remain visible and the anchors still work.
+      const views = { index: document.getElementById('index'), releases: document.getElementById('releases') };
+      const tabs = document.querySelectorAll('.view-tabs [data-route]');
+      let currentView;
+      function route(focus = false) {
+        const name = location.hash === '#releases' ? 'releases' : 'index';
+        const changed = currentView !== name;
+        Object.entries(views).forEach(([key, view]) => {
+          view.hidden = key !== name;
+          if (key !== name) view.classList.remove('is-entering');
+        });
+        tabs.forEach(tab => {
+          if (tab.dataset.route === name) tab.setAttribute('aria-current', 'page');
+          else tab.removeAttribute('aria-current');
+        });
+        if (changed && currentView) views[name].classList.add('is-entering');
+        document.getElementById('folio-view').textContent = name === 'releases' ? 'RELEASES / 02' : 'STUDIO INDEX / 01';
+        currentView = name;
+        if (focus && changed) {
+          views[name].querySelector('.view-heading').focus({ preventScroll: true });
+          window.scrollTo(0, 0);
+        }
+      }
+      document.querySelectorAll('[data-route]').forEach(link => {
+        link.addEventListener('click', event => {
+          if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+          route(true);
+        });
+      });
+      window.addEventListener('hashchange', () => route(true));
+      window.addEventListener('popstate', () => route(true));
+      route();
+
+      const copy = document.getElementById('copy-email');
+      const mail = document.getElementById('mail-link');
+      const status = document.getElementById('copy-status');
+      const email = SITE_LINKS.email;
+      document.getElementById('email-text').textContent = email;
+      document.getElementById('copy-accessible').textContent = `Copy ${email}`;
+      mail.href = `mailto:${email}`;
+      copy.disabled = false;
+      let resetCopy;
+      function legacyCopy() {
+        const field = document.createElement('textarea');
+        field.value = email;
+        field.readOnly = true;
+        field.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px;';
+        document.body.append(field);
+        field.focus({preventScroll:true});
+        field.select(); field.setSelectionRange(0, email.length);
+        try { return document.execCommand('copy'); }
+        finally { field.remove(); copy.focus({preventScroll:true}); }
+      }
+      copy.addEventListener('click', async () => {
+        clearTimeout(resetCopy);
+        let ok = false;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(email); ok = true;
+          } else { ok = legacyCopy(); }
+        } catch (_) { try { ok = legacyCopy(); } catch (_) {} }
+        if (!ok) {
+          copy.dataset.copied = 'false';
+          status.textContent = 'Copy unavailable. Use the email link or copy the displayed address manually.';
+          const selection = window.getSelection();
+          if (selection) {
+            const range = document.createRange();
+            range.selectNodeContents(document.getElementById('email-text'));
+            selection.removeAllRanges(); selection.addRange(range);
+          }
+          return;
+        }
+        copy.dataset.copied = 'true';
+        status.textContent = 'Email address copied.';
+        resetCopy = setTimeout(() => { copy.dataset.copied = 'false'; status.textContent = ''; }, 2000);
+      });
+
+      // Organic expressions and restrained eye tracking. Pause when hidden.
+      const mascot = document.getElementById('mascot');
+      const pupils = mascot.querySelectorAll('.pupil');
+      mascot.disabled = false;
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+      const desktop = matchMedia('(hover: hover) and (pointer: fine)');
+      let timer = 0, frame = 0, x = 0, y = 0, tx = 0, ty = 0;
+      const random = (min, max) => min + Math.random() * (max - min);
+      const active = () => !reduced.matches && !document.hidden;
+      function schedule() {
+        if (!active()) return;
+        timer = setTimeout(() => {
+          const squint = Math.random() < .36;
+          mascot.dataset.expression = squint ? 'squint' : 'blink';
+          timer = setTimeout(() => {
+            mascot.dataset.expression = 'idle'; schedule();
+          }, squint ? random(520, 930) : random(100, 155));
+        }, random(2100, 5200));
+      }
+      mascot.addEventListener('click', () => {
+        clearTimeout(timer);
+        mascot.dataset.expression = 'squint';
+        mascot.removeAttribute('data-reacting');
+        if (active()) {
+          // Restart the one-shot reaction even for rapid repeated taps.
+          void mascot.offsetWidth;
+          mascot.dataset.reacting = 'true';
+        }
+        timer = setTimeout(() => {
+          mascot.dataset.expression = 'idle';
+          mascot.removeAttribute('data-reacting');
+          schedule();
+        }, 780);
+      });
+      function animateGaze() {
+        frame = 0;
+        if (!active()) return;
+        x += (tx - x) * .16; y += (ty - y) * .16;
+        if (Math.abs(tx - x) < .015 && Math.abs(ty - y) < .015) { x = tx; y = ty; }
+        pupils.forEach(pupil => pupil.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)})`));
+        if (x !== tx || y !== ty) frame = requestAnimationFrame(animateGaze);
+      }
+      function requestGaze() { if (!frame && active()) frame = requestAnimationFrame(animateGaze); }
+      window.addEventListener('pointermove', event => {
+        if (!active() || !desktop.matches || event.pointerType !== 'mouse') return;
+        const box = mascot.getBoundingClientRect();
+        const dx = event.clientX - (box.left + box.width * .5);
+        const dy = event.clientY - (box.top + box.height * .48);
+        const length = Math.max(140, Math.hypot(dx, dy));
+        tx = 5 * dx / length; ty = Math.max(-1.8, Math.min(4, 4 * dy / length));
+        requestGaze();
+      }, {passive:true});
+      function resetGaze() { tx = ty = 0; requestGaze(); }
+      document.documentElement.addEventListener('pointerleave', resetGaze);
+      window.addEventListener('blur', resetGaze);
+      function syncMotion() {
+        clearTimeout(timer); cancelAnimationFrame(frame); frame = 0;
+        mascot.dataset.expression = 'idle';
+        mascot.removeAttribute('data-reacting');
+        x = y = tx = ty = 0; pupils.forEach(pupil => pupil.removeAttribute('transform'));
+        mascot.style.animationPlayState = active() ? 'running' : 'paused';
+        mascot.querySelector('.creature').style.animationPlayState = active() ? 'running' : 'paused';
+        schedule();
+      }
+      function watch(query, callback) {
+        if (query.addEventListener) query.addEventListener('change', callback);
+        else query.addListener(callback);
+      }
+      watch(reduced, syncMotion); watch(desktop, resetGaze);
+      document.addEventListener('visibilitychange', syncMotion);
+      syncMotion();
+    })();
+  </script>
+</body>
+</html>
